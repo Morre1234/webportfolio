@@ -1,9 +1,16 @@
+html {
+background-color: #141468;
+opacity: 1;
+background-image: radial-gradient(circle at center center, #2e338a, #141468), repeating-radial-gradient(circle at center center, #2e338a, #2e338a, 140px, transparent 180px, transparent 140px);
+background-blend-mode: multiply;
+}
+
 body {
     margin: 0 auto;
     font-family: 'Plus Jakarta Sans', sans-serif;
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
-    background: url(img_source/main_bg.png);
+    /* background: url(img_source/main_bg.png); */
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -11,23 +18,20 @@ body {
 }
 
 header {
-    width: 110%;
-    min-height: 20vh; 
-    max-height: 35vh;
+    width: 100%;
+    height: 100%;
     font-family: 'Outfit', sans-serif;
     font-size: 2rem;
-    overflow: hidden;
+    overflow:hidden;
     top: 0;
-    position: fixed;
-        background: radial-gradient(
+    position:fixed;
+  background: radial-gradient(
     circle at center,
-    rgba(0,170,255,0.3) 0%,
+    rgba(0,170,255,0.4) 0%,
     rgba(0,170,255,0.2) 40%,
-    rgba(0,170,255,0.02) 70%,
+    rgba(0,170,255,0.05) 70%,
     rgba(0,170,255,0) 100%
   );
-    backdrop-filter: blur(10.5px);
-    -webkit-backdrop-filter: blur(12.5px);
     padding: 2rem;
 
     border-radius: 46px;
@@ -35,7 +39,7 @@ header {
 
 header p { color: #fff; font-size: 1rem; text-align: center;}
 
-header h1 { color: #ffffff; text-align: left; font-size: 2.5rem; text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.25); text-align: center;}
+header h1 { color: #ffffff; text-align: left; font-size: 2.5rem; text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.25); text-align: center; }
 
 header hr {
     border: none;
@@ -60,7 +64,7 @@ header hr {
     padding: 2rem;
     min-width: 80vh;
     max-width: 95vh;
-    background: rgba(3, 3, 3, 0.25);
+    background: rgba(3, 3, 3, 0.20);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10.5px);
@@ -78,7 +82,7 @@ header hr {
     grid-column: span 2;
 }
 
-.full-width {s
+.full-width {
     grid-column: 1 / -1;
 }
 
@@ -100,9 +104,21 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     min-height: 20px;
     color: #fff;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.1);
     overflow: hidden;
        transition: 0.3;
+}
+
+.glass-card img {
+  width: 260px;
+  height: 260px;
+  transition: 0.3s;
+  margin: 12px;
+}
+
+.glass-card img:hover {
+  opacity: 1;
+  transform: scale(1.2);
 }
 
 .glass-card:has(.skill:hover) {
@@ -263,14 +279,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .legende_color {
     background: var(--legend-color);
-    width: 25%;
     padding: 1rem;
     border-radius: 12px;
     margin: 8px;
     text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
-    font-size: 0.8em;
-    border: 2px solid rgba(0, 0, 0, 0.21);
-    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.178)
+    font-size: 1em;
+    border: 2px solid rgba(255, 255, 255, 0.21);
+    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.178);
+    font-weight: lighter;
 }
 
 .skill-list {
@@ -286,7 +302,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
-  font-weight: lighter;
+  letter-spacing: 2.4px;
   background: radial-gradient(
     circle at center,
     rgba(0,170,255,0.4) 0%,
