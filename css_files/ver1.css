@@ -62,8 +62,9 @@ header hr {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 2rem;
-    min-width: 80vh;
-    max-width: 95vh;
+    width: 100%;
+    max-width: 1200px;
+    margin: 12rem auto 0 auto;
     background: rgba(3, 3, 3, 0.20);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
