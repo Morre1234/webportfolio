@@ -49,38 +49,32 @@ header hr {
 
 }
 
-#portfolio_banner {
-    height: 20vh;
-    width: 200px;
-    display: flex;
-    justify-content: left;
-}
-
-
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 2rem;
+
     width: 100%;
     max-width: 1200px;
     margin: 12rem auto 0 auto;
+
     background: rgba(3, 3, 3, 0.20);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10.5px);
-    -webkit-backdrop-filter: blur(12.5px);
-    margin-top: 12rem;
 }
 
 @media (max-width: 768px) {
     .portfolio-grid {
-        grid-template-columns: 1fr; /* nur eine Spalte */
+        grid-template-columns: 1fr;
     }
 }
 
-.portfolio-grid > .glass-card:nth-child(2) {
-    grid-column: span 2;
+@media (min-width: 769px) {
+    .portfolio-grid > .glass-card:nth-child(2) {
+        grid-column: span 2;
+    }
 }
 
 .full-width {
