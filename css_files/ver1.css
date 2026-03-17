@@ -6,15 +6,9 @@ background-blend-mode: multiply;
 }
 
 body {
-    margin: 0 auto;
+    margin: 0;
     font-family: 'Plus Jakarta Sans', sans-serif;
     min-height: 100vh;
-    -webkit-font-smoothing: antialiased;
-    /* background: url(img_source/main_bg.png); */
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 header {
@@ -65,24 +59,18 @@ header hr {
     backdrop-filter: blur(10.5px);
 }
 
-@media (max-width: 768px) {
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (min-width: 769px) {
-    .portfolio-grid > .glass-card:nth-child(2) {
-        grid-column: span 2;
-    }
-}
-
 .full-width {
     grid-column: 1 / -1;
 }
 
 .mid-width {
-    grid-column: 2 / -1;
+    grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+    .mid-width {
+        grid-column: span 1;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -120,7 +108,10 @@ h1, h2, h3, h4, h5, h6 {
     min-height: 200px;
 }
 
-.glass-card p, h1, h2, h3 {
+.glass-card p,
+.glass-card h1,
+.glass-card h2,
+.glass-card h3 {
     text-align: left;
 }
 
