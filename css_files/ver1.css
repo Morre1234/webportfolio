@@ -68,10 +68,17 @@ header hr {
 }
 
 @media (max-width: 768px) {
-    .mid-width {
-        grid-column: span 1;
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mid-width,
+    .full-width {
+        grid-column: auto;
     }
 }
+
+
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Outfit', sans-serif;
